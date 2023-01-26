@@ -1,6 +1,236 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  min-width: 320px;
+  background-image: url("./assets/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  height: calc(100vh - 300px);
+}
+
+.section-map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.map-style-container {
+  position: relative;
+  height: 100%;
+  min-width: 300px;
+  z-index: 0;
+}
+
+.section-search-and-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.title-ip-address-tracker {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: -0.232143px;
+  color: #ffffff;
+}
+
+.search-ip-address-tracker {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-ip-address-tracker input {
+  height: 58px;
+  width: 250px;
+  border: 0px;
+  border-radius: 15px 0px 0px 15px;
+  padding-left: 24px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.search-ip-address-tracker input:focus {
+  outline: none;
+}
+
+.error-msg-input {
+  color: rgba(228, 23, 23, 0.919);
+  margin-left: 6px;
+}
+
+.search-ip-address-tracker button {
+  height: 60px;
+  width: 58px;
+  background: #000000;
+  border: 0px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.search-ip-address-tracker span {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.info-ip-address-tracker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 327px;
+  height: 294px;
+  background: #ffffff;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+  border-radius: 15px;
+}
+
+.panel-info-ip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-info-ip h1 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
   text-align: center;
+  letter-spacing: 1.45833px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.panel-info-ip span {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.178571px;
+  color: #2c2c2c;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 250px;
+  }
+
+  main {
+    height: calc(100vh - 250px);
+  }
+
+  .title-ip-address-tracker {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: -0.285714px;
+    color: #ffffff;
+  }
+
+  .search-ip-address-tracker input {
+    width: 555px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(51, 47, 47, 0.6);
+    mix-blend-mode: normal;
+  }
+
+  .search-ip-address-tracker button:hover {
+    cursor: pointer;
+  }
+
+  .info-ip-address-tracker {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    width: auto;
+    max-width: 1110px;
+    min-height: 161px;
+    height: auto;
+  }
+
+  .panel-info-ip {
+    align-items: flex-start;
+    width: auto;
+    max-width: 213px;
+    padding: 0px 10px;
+    margin-top: 37px;
+  }
+
+  .panel-info-ip h1 {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.75px;
+  }
+
+  .panel-info-ip span {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: -0.232143px;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 280px;
+  }
+
+  main {
+    height: calc(100vh - 280px);
+  }
+
+  .section-search-and-info {
+    gap: 20px;
+  }
+
+  .panel-info-ip {
+    position: relative;
+    width: 213px;
+    padding: 0px 32px;
+  }
+
+  .separator {
+    position: absolute;
+    width: 1px;
+    height: 75px;
+    top: 15px;
+    right: 0px;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.15;
+  }
 }
